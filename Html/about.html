@@ -1,1 +1,103 @@
+<!DOCTYPE html>
 
+<html lang="nb">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Css/Style.css">
+
+    <!-- Add Google Maps API Key here -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+
+    <style>
+        /* Add your CSS styles for the map container */
+        #map {
+            height: 300px; /* Adjust the height as needed */
+            width: 100%;
+        }
+
+        /* Add your CSS styles for the form container */
+        #contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Add your additional form styling as needed */
+    </style>
+
+    <script>
+        function initMap() {
+            // Replace latitude and longitude with the actual coordinates
+            var myLatLng = { lat: 0, lng: 0 };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'B R A veien 4'
+            });
+        }
+    </script>
+
+    <title>Eksamen</title>
+</head>
+
+<body>
+    <nav>   <!-- Logo lenke -->
+        <a href="index.html">
+            <img class="logo nav" src="../Ressurser/logo2.png" alt="logo"> 
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Compling headline</h1>
+        <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast
+            quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
+        <a class="button">Les mer</a>
+    </header>
+
+    <main>
+        <!-- Add the map container -->
+        <div id="map"></div>
+
+        <!-- Add the form container -->
+        <div id="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <!-- Add your form fields here -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+           <!-- Logo lenke -->
+           <a href="index.html">
+            <img class="logo nav" src="../Ressurser/logo2.png" alt="logo"> 
+        </a>
+        <span>Twitter</span>
+        <span>Facebook</span>
+        <span>Instagram</span>
+    </footer>
+</body>
+
+</html>
